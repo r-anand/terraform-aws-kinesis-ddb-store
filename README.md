@@ -11,7 +11,7 @@ In this project, you should be able
 Terraform project to provision Kinesis data stream to process real time data, store them in DynamoDB NoSQL database. 
 
 
-## Scenario
+## Project Scenario
 
 TELEMAX is a company that plans to build networks in rapidly growing,underserved markets around the world. The company offers innovative communications hardware that enables them to create many speed efficient networking links with inexpensive hardware.
 
@@ -21,10 +21,10 @@ Presently, they need, to deploy an effective architecture for NoSQL based data w
 
 ## Pre-Requisites (accounts & software)
 
-1. Microsoft Azure Account
+1. AWS Account with Console access
 2. GitHub account
-3. Azure CLI
-4. Terraform
+3. AWS CLI Access keys
+4. Hashicorp Terraform
 
 
 ## Steps:
