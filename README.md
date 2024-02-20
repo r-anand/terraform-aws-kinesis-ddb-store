@@ -25,6 +25,7 @@ Presently, they need, to deploy an effective architecture for NoSQL based data w
 2. GitHub account
 3. AWS CLI Access keys
 4. Hashicorp Terraform
+5. source for data steam producer and consumer in your favorite language. I am using Python for this example.
 
 
 ## Steps:
