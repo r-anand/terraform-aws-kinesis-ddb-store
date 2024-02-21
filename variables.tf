@@ -42,9 +42,9 @@ variable "aws_account_id" {
 
 variable "kinesis-ds-name" {
   description = "A name to identify the stream. This is unique to the AWS account and region the Stream is created"
-  type = string
-  default = "terraform-kinesis-test"
-  
+  type        = string
+  default     = "terraform-kinesis-test"
+
 }
 
 variable "shard_count" {

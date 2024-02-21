@@ -1,12 +1,8 @@
 resource "aws_kinesis_stream" "default" {
-  name             = var.kinesis-ds-name
-  shard_count      = var.shard_count
-  retention_period = var.retention_period
+  name                = var.kinesis-ds-name
+  shard_count         = var.shard_count
+  retention_period    = var.retention_period
   shard_level_metrics = var.shard_level_metrics
-
-  # stream_mode_details {
-  #   stream_mode = "PROVISIONED"
-  # }
 
   dynamic "stream_mode_details" {
     for_each = var.stream_mode != null ? ["true"] : []
@@ -14,7 +10,9 @@ resource "aws_kinesis_stream" "default" {
       stream_mode = var.stream_mode
     }
   }
-
+  # stream_mode_details {
+  #   stream_mode = "PROVISIONED"
+  # }
 
   tags = local.tags
 }
