@@ -1,8 +1,7 @@
 resource "aws_kinesis_stream" "default" {
-  name             = "terraform-kinesis-test"
+  name             = var.kinesis-ds-name
   shard_count      = var.shard_count
   retention_period = var.retention_period
-
   shard_level_metrics = var.shard_level_metrics
 
   # stream_mode_details {
