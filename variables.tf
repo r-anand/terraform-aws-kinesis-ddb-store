@@ -1,19 +1,19 @@
 variable "Application" {
   description = "Application's Name"
   type        = string
-  default     = ""
+  default     = "TELEMAX datawarehouse - Kinesis DS to DDB"
 }
 
 variable "Contact" {
   description = "Email address of Cloud Operations team."
   type        = string
-  default     = ""
+  default     = "ramasubramanian.anand@gmail.com"
 }
 
 variable "Version" {
   description = "Git Commit hash"
   type        = string
-  default     = ""
+  default     = "1"
 }
 
 variable "AWS_REGION" {
@@ -31,7 +31,7 @@ variable "Environment" {
 variable "AWS_ACCOUNT_NAME" {
   description = "aws account name"
   type        = string
-  default     = ""
+  default     = "Telemax - us-east-1"
 }
 
 variable "aws_account_id" {
@@ -40,10 +40,14 @@ variable "aws_account_id" {
   default     = ""
 }
 
+#
+# AWS Kinesis Parameters
+#
+
 variable "kinesis-ds-name" {
   description = "A name to identify the stream. This is unique to the AWS account and region the Stream is created"
   type        = string
-  default     = "terraform-kinesis-test"
+  default     = "tf-kinesis-ds-realtime-data"
 
 }
 
@@ -99,3 +103,13 @@ variable "enforce_consumer_deletion" {
 #   type        = number
 #   default     = 0
 # }
+
+#
+# AWS DynamoDB config and parameters
+#
+
+variable "ddb_table_name" {
+  description = "DynamoDB table name to store kinesis data stream data"
+  default     = "realtime_data"
+
+}
